@@ -164,7 +164,7 @@ def MatplotlibDiy(
     示例:
     ===============================================================================0
     导入模块
-    >>> from TidyStats import MatplotlibDiy
+    >>> from TidySeaborn import MatplotlibDiy
     >>> import matplotlib.pyplot as plt
     测试画布参数
     ===============================================================================1

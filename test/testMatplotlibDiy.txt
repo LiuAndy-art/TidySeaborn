@@ -1,0 +1,150 @@
+===============================================================================0
+导入模块
+>>> from TidySeaborn import MatplotlibDiy
+>>> import matplotlib.pyplot as plt
+测试画布参数
+===============================================================================1
+>>> fig, ax = plt.subplots(figsize=(2, 2))
+>>> ax = MatplotlibDiy(fig, block=False)
+>>> plt.pause(1)
+>>> plt.close()
+===============================================================================2
+>>> ax = MatplotlibDiy(fig_length=5, fig_width=4, facecolor="pink", edgecolor="green", block=False)
+>>> plt.pause(1)
+>>> plt.close()
+===============================================================================3
+>>> ax = MatplotlibDiy(facecolor=(0.4,0.5,0.6), edgecolor=(0.2,0.4,0.9,0.3), block=False)
+>>> plt.pause(1)
+>>> plt.close()
+===============================================================================4
+>>> ax = MatplotlibDiy(layout="constrained", block=False)
+>>> plt.pause(1)
+>>> plt.close()
+===============================================================================5
+>>> ax = MatplotlibDiy(layout="compressed", block=False)
+>>> plt.pause(1)
+>>> plt.close()
+===============================================================================6
+>>> ax = MatplotlibDiy(layout="tight", block=False)
+>>> plt.pause(1)
+>>> plt.close()
+===============================================================================7
+测试横轴标签，纵轴标签，标题
+>>> ax = MatplotlibDiy(xlabel="日期", ylabel="人数", title="人数关于日期的图形", xlabelsize=10, ylabelsize=15, titlesize=13, xlabelcolor="purple", ylabelcolor=(0.3, 0.9, 0.4, 0.4), titlecolor=(0,0,0), xlabelha="left", ylabelha="center", xlabelva="top", ylabelva="bottom", titlelabelha="center", titlelabelva="center_baseline", xlabelpad=8, ylabelpad=10, titlelabelpad=10, xlabelrotation=30, ylabelrotation=0, titlelabelrotation=10, block=False)
+>>> plt.pause(2)
+>>> plt.close()
+===============================================================================8
+测试latex语法，不能含有中文
+>>> ax = MatplotlibDiy(xlabel="$x$", ylabel="$y$", title="$y=\sin(x)$", isxlabellatex=1, isylabellatex=1, istitlelatex=1, block=False)
+>>> plt.pause(2)
+>>> plt.close()
+===============================================================================9
+测试刻度
+>>> ax = MatplotlibDiy(xtick=[0.3, 0.6, 0.9], ytick=[0.3, 0.6, 0.9], xticksize=2, yticksize=6, xtickwidth=1, ytickwidth=5, xtickdirection="in", ytickdirection="out", xtickcolor="red", ytickcolor="green", xtickzc="major", ytickzc="major", block=False)
+>>> plt.pause(3)
+>>> plt.close()
+===============================================================================10
+测试刻度标签
+>>> ax = MatplotlibDiy(xtick=[0.3, 0.6, 0.9], ytick=[0.3, 0.6, 0.9], xticklabel=["a", "b", "c"], yticklabel=["A", "B", "C"], xticklabelsize=10, yticklabelsize=16, xticklabelcolor="purple", yticklabelcolor="pink", xticklabelrotation=20, yticklabelrotation=10, block=False)
+>>> plt.pause(3)
+>>> plt.close()
+===============================================================================11
+测试XY轴范围
+>>> ax = MatplotlibDiy(xlim=[0, 10], ylim=[-10,10], block=False)
+>>> plt.pause(3)
+>>> plt.close()
+===============================================================================12
+测试显示轴线
+>>> ax = MatplotlibDiy(leftaxiswidth=2, rightaxiswidth=3, topaxiswidth=4, bottomaxiswidth=5, isleftaxisdisplay=1, isrightaxisdisplay=1, istopaxisdisplay=1, isbottomaxisdisplay=1, leftaxisstyle="-", rightaxisstyle="--", topaxisstyle="-.", bottomaxisstyle=":", leftaxiscolor="black", rightaxiscolor="red", topaxiscolor="green", bottomaxiscolor="blue", block=False)
+>>> plt.pause(3)
+>>> plt.close()
+===============================================================================13
+测试不显示轴线
+>>> ax = MatplotlibDiy(leftaxiswidth=2, bottomaxiswidth=5, isleftaxisdisplay=1, isrightaxisdisplay=0, istopaxisdisplay=0, isbottomaxisdisplay=1, leftaxisstyle="-", bottomaxisstyle=":", leftaxiscolor="black", bottomaxiscolor="blue", block=False)
+>>> plt.pause(3)
+>>> plt.close()
+===============================================================================14
+测试保存文件
+>>> ax = MatplotlibDiy(savefilename="最后一张.pdf", block=False)
+>>> plt.pause(1)
+>>> plt.close()
+>>> ax = MatplotlibDiy(savefilename="最后一张.png", block=False)
+>>> plt.pause(1)
+>>> plt.close()
+>>> ax = MatplotlibDiy(savefilename="最后一张.jpg", block=False)
+>>> plt.pause(1)
+>>> plt.close()
+===============================================================================15
+测试不显示图形
+>>> ax = MatplotlibDiy(isshowplot=0, block=False)
+>>> plt.pause(1)
+>>> plt.close()
+===============================================================================16
+测试字体显示
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="方正舒体", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="方正姚体", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="仿宋", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="黑体", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文彩云", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文仿宋", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文琥珀", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文楷体", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文隶书", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文宋体", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文细黑", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文新魏", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文行楷", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="华文中宋", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="楷体", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="隶书", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="宋体", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="微软雅黑", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="新宋体", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="中文字体", ylabel="显示正确", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="幼圆", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="X-axis", ylabel="Y-axis", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="TimesNewRoman", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+>>> ax = MatplotlibDiy(xlabel="X-axis", ylabel="Y-axis", xlabelsize=15, ylabelsize=15, xlabelcolor="pink", ylabelcolor="purple", fontfamily="Arial", block=False)
+>>> plt.pause(2)
+>>> plt.close()
+===============================================================================17

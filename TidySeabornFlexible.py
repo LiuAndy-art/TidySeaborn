@@ -585,9 +585,9 @@ def TidySeabornFlexible(
     示例：
     ===============================================================================0
     导入模块
-    >>> from TidyStats import TidySeabornFlexible
+    >>> from TidySeaborn import TidySeabornFlexible
     >>> import matplotlib.pyplot as plt
-    >>> from TidyStats import GetSeabornData
+    >>> from TidySeaborn import GetSeabornData
     >>> import numpy as np
     >>> iris = GetSeabornData("iris")
     >>> tips = GetSeabornData("tips")
@@ -3515,6 +3515,7 @@ def TidySeabornFlexible(
     >>> plt.close()
     ===============================================================================270
     测试一般绘图的字体参数
+    >>> glue = GetSeabornData("glue")
     >>> ax = TidySeabornFlexible(glue.pivot(index="Model", columns="Task", values="Score"), "heat", heatparamsdict={"isannot": 1, "fmt": ".2f", "linewidths": 0.5}, xlabel="X轴", ylabel="Y轴", title="热图", xlabelsize=10, ylabelsize=16, titlesize=14, xticklabelsize=9, yticklabelsize=15, xticklabelrotation=30, yticklabelrotation=45, fontfamily="幼圆", block=False)
     >>> plt.pause(2)
     >>> plt.close()

@@ -2924,6 +2924,7 @@ x重复值下的单个线图
 >>> plt.close()
 ===============================================================================269
 换一个颜色
+>>> glue = GetSeabornData("glue")
 >>> glue = glue.pivot(index="Model", columns="Task", values="Score")
 >>> ax = TidySeabornFlexible(glue, "heat", heatparamsdict={"annot": glue.rank(axis="columns"), "linewidths": 0.5}, colormap="viridis", block=False)
 >>> plt.pause(2)
@@ -2936,11 +2937,13 @@ x重复值下的单个线图
 >>> plt.close()
 ===============================================================================271
 测试一般绘图的文件保存参数
+>>> glue = GetSeabornData("glue")
 >>> ax = TidySeabornFlexible(glue.pivot(index="Model", columns="Task", values="Score"), "heat", heatparamsdict={"isannot": 1, "fmt": ".2f", "linewidths": 0.5}, xlabel="X轴", ylabel="Y轴", title="热图", xlabelsize=10, ylabelsize=16, titlesize=14, xticklabelsize=9, yticklabelsize=15, xticklabelrotation=30, yticklabelrotation=45, fontfamily="幼圆", savefilename="./image/热图.pdf", block=False)
 >>> plt.pause(2)
 >>> plt.close()
 ===============================================================================272
 测试一般绘图参数的绘图风格参数
+>>> glue = GetSeabornData("glue")
 >>> ax = TidySeabornFlexible(glue.pivot(index="Model", columns="Task", values="Score"), "heat", heatparamsdict={"isannot": 1, "fmt": ".2f", "linewidths": 0.5}, xlabel="X轴", ylabel="Y轴", title="热图", xlabelsize=10, ylabelsize=16, titlesize=14, xticklabelsize=9, yticklabelsize=15, xticklabelrotation=30, yticklabelrotation=45, fontfamily="幼圆", snsstyle="darkgrid", removeleftspine=0, removerightspine=1, removetopspine=1, removebottomspine=0, offset=None, trim=0, contextstyle="notebook", block=False)
 >>> plt.pause(2)
 >>> plt.close()

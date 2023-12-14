@@ -5626,8 +5626,8 @@ def TidySeabornFlexible(
                         facetparamsdictdefault["islegend_out"]),
                     margin_titles=bool(
                         facetparamsdictdefault["isshowmargin_titles"]),
-                    sharex=facetparamsdictdefault["issharex"],
-                    sharey=facetparamsdictdefault["issharey"],
+                    sharex=bool(facetparamsdictdefault["issharex"]),
+                    sharey=bool(facetparamsdictdefault["issharey"]),
                     xlim=facetparamsdictdefault["xlim"],
                     ylim=facetparamsdictdefault["ylim"],
                     col_wrap=facetparamsdictdefault["col_wrap"])
@@ -5661,8 +5661,8 @@ def TidySeabornFlexible(
                         facetparamsdictdefault["islegend_out"]),
                     margin_titles=bool(
                         facetparamsdictdefault["isshowmargin_titles"]),
-                    sharex=facetparamsdictdefault["issharex"],
-                    sharey=facetparamsdictdefault["issharey"],
+                    sharex=bool(facetparamsdictdefault["issharex"]),
+                    sharey=bool(facetparamsdictdefault["issharey"]),
                     xlim=facetparamsdictdefault["xlim"],
                     ylim=facetparamsdictdefault["ylim"],
                     col_wrap=facetparamsdictdefault["col_wrap"])
